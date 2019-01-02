@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ADD ITEMS</title>
+</head>
+<body>
+  <h1>Store Items</h1>
+  <form action = "{{url_for('store')}}" method = "POST">
+   <input name="eggs" type="number" value="0" min="0">Eggs--Rs.5<br>
+   <input name="milk" type="number" value="0" min="0">Milk--Rs.5<br>
+   <input name="bread" type="number" value="0" min="0">Bread--Rs.5<br> 
+   <input value="Add to cart" type="submit"><br>
+  </form>
+ <a href="{{url_for('cart')}}">View items in cart</a>
+</body>
+</html> 
+ 
+

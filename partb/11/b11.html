@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <script type="text/javascript" src="b11a.json"></script>
+ <script type="text/javascript" src="b11b.json"></script>
+ <style>
+  table{
+      width:100%;
+      text-align:center;
+      }
+  th{
+    font-size:xx-large;  
+    background-color:#4CAF50;
+    }
+ td{
+    font-size:x-large;
+    }
+ td:hover{
+    background-color:#4CA;
+   }
+ </style>
+</head>
+<body>
+ <table id="menu">
+ <tr><th onclick="myfunc()">Click to view patient details</th></tr>
+ </table>
+ <hr><br>
+ <table id="data-table" hidden>
+ <tr><td id = "item1"></td><td id="item4" onmouseover="fun(0)">Patient Details</td></tr>
+  <tr><td id = "item2"></td><td id="item5" onmouseover="fun(1)">Patient Details</td></tr>
+  <tr><td id = "item3"></td><td id="item6" onmouseover="fun(2)">Patient Details</td></tr>
+ </table>
+
+
+<script>
+function myfunc(){
+ document.getElementById("data-table").removeAttribute("hidden");
+ document.getElementById("item1").innerHTML=obj2[0].hospitalname+"<br>"+obj2[0].location;
+ document.getElementById("item2").innerHTML=obj2[1].hospitalname+"<br>"+obj2[1].location;
+ document.getElementById("item3").innerHTML=obj2[2].hospitalname+"<br>"+obj2[2].location;
+}
+
+function fun(i){
+ var objs,objson,n;
+ objson=JSON.stringify(obj1);
+ objs=JSON.parse(objson);
+ n=objs[i];
+ document.getElementById("item"+(i+4)).innerHTML=n.name+"<br>"+n.aadharno+"<br>"+n.labtest[0]+"<br>"+n.labtest[1];
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

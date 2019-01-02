@@ -1,0 +1,3 @@
+obj1=[{"name":"anu","aadharno":4589,"labtest":["urine-test","blood-test"]},
+      {"name":"anusha","aadharno":8542,"labtest":["thyroid-test","blood-test"]},
+      {"name":"krati","aadharno":5542,"labtest":["thyroid-test","urine-test"]}]
