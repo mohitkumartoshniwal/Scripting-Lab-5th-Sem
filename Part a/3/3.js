@@ -8,5 +8,6 @@ function long()
                  if(v.length>maxi.length) 
                  maxi = v;
                 });
+                
         document.getElementById('sp1').textContent = maxi + '   length:   ' + maxi.length;
 }

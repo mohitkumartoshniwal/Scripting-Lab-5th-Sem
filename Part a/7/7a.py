@@ -9,7 +9,7 @@ def AD():
             print("key exists and hence value is replaced")
     else:
             print("new key and value added to dictionary")
-    d[new_symbol]=new_element
+            d[new_symbol]=new_element
     print(d)
 
     print("length of dictionary: ",str(len(d)))
